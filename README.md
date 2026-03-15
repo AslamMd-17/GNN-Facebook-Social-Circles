@@ -1,17 +1,17 @@
 # GNN Facebook Social Circles — Node Classification
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/gnn-facebook-social-circles/blob/main/notebooks/01_data_loading.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AslamMd-17/GNN-Facebook-Social-Circles/blob/main/notebooks/01_data_loading.ipynb)
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Geometric-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Overview
 
-This project applies **Graph Neural Networks (GCN and GAT)** to the 
-[Facebook Social Circles dataset](https://snap.stanford.edu/data/ego-Facebook.html) 
+This project applies **Graph Neural Networks (GCN and GAT)** to the
+[Facebook Social Circles dataset](https://snap.stanford.edu/data/ego-Facebook.html)
 from Stanford SNAP to predict which social circle (community group) a user belongs to.
 
-The core question: **does modelling friendship connections as a graph improve 
+The core question: **does modelling friendship connections as a graph improve
 community detection over traditional ML that only sees user profile features?**
 
 **Answer: Yes — by over 20 percentage points.**
@@ -59,8 +59,8 @@ gnn-facebook-social-circles/
 | GCN | **0.6379** | **0.3813** | Graph Neural Network |
 | GAT | 0.5862 | 0.3726 | Graph Neural Network |
 
-**GCN outperforms the best baseline (Logistic Regression) by +20.69% accuracy 
-and +26.25% F1-macro — confirming that graph structure is critical for 
+**GCN outperforms the best baseline (Logistic Regression) by +20.69% accuracy
+and +26.25% F1-macro — confirming that graph structure is critical for
 community detection in social networks.**
 
 ---
@@ -145,20 +145,20 @@ https://snap.stanford.edu/data/ego-Facebook.html
 ## Key Findings
 
 - GNNs dramatically outperform feature-only models on this task
-- GCN outperforms GAT — likely because the ego network has relatively 
+- GCN outperforms GAT — likely because the ego network has relatively
   uniform neighbour importance, so attention heads add noise rather than signal
 - t-SNE visualization shows GCN learns well-separated embeddings per circle
-- Low F1 scores on baselines indicate they struggle with class imbalance 
+- Low F1 scores on baselines indicate they struggle with class imbalance
   across 24 circles — GCN handles this far better via neighbourhood aggregation
 
 ---
 
 ## Resume Summary
 
-> Built GCN and GAT models on the Facebook Social Circles dataset (4,039 nodes, 
-> 88,234 edges) achieving **63.79% node classification accuracy**, outperforming 
-> MLP and Logistic Regression baselines by **+20.69%**. Implemented full pipeline 
-> from raw SNAP data to PyTorch Geometric graph construction, model training, 
+> Built GCN and GAT models on the Facebook Social Circles dataset (4,039 nodes,
+> 88,234 edges) achieving **63.79% node classification accuracy**, outperforming
+> MLP and Logistic Regression baselines by **+20.69%**. Implemented full pipeline
+> from raw SNAP data to PyTorch Geometric graph construction, model training,
 > t-SNE embedding visualization and baseline comparison across 5 models.
 
 ---
